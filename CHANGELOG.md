@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/lluchmk/SemanticReleaseTest/compare/v1.1.0...v1.1.1) (2019-01-27)
+
+
+### Bug Fixes
+
+* Fix typo when on output var retrieval. ([8d66fad](https://github.com/lluchmk/SemanticReleaseTest/commit/8d66fad))
+
 # [1.1.0](https://github.com/lluchmk/SemanticReleaseTest/compare/v1.0.0...v1.1.0) (2019-01-27)
 
 
