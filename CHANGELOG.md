@@ -1,3 +1,10 @@
+## [1.1.4](https://github.com/lluchmk/SemanticReleaseTest/compare/v1.1.3...v1.1.4) (2019-01-27)
+
+
+### Bug Fixes
+
+* And up ([192a4fb](https://github.com/lluchmk/SemanticReleaseTest/commit/192a4fb))
+
 ## [1.1.3](https://github.com/lluchmk/SemanticReleaseTest/compare/v1.1.2...v1.1.3) (2019-01-27)
 
 
