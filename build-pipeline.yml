@@ -22,7 +22,7 @@ jobs:
     displayName: 'Semantic release'
 
   - powershell: |
-      echo "##vso[task.setvariable variable=versionNumber;isOutput=true]$(nextRelease)"
+      echo "##vso[task.setvariable variable=versionNumber;isOutput=true]$(version)"
     name: setOutputVar
 
   - script: echo $(version)
