@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/lluchmk/SemanticReleaseTest/compare/v1.1.1...v1.1.2) (2019-01-27)
+
+
+### Bug Fixes
+
+* Update next release variable nanme on build-pipeline ([d09c5c2](https://github.com/lluchmk/SemanticReleaseTest/commit/d09c5c2))
+
 ## [1.1.1](https://github.com/lluchmk/SemanticReleaseTest/compare/v1.1.0...v1.1.1) (2019-01-27)
 
 
