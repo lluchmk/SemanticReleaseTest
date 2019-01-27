@@ -33,7 +33,7 @@ jobs:
   pool:
     vmImage: 'vs2017-win2016'
   variables:
-    versionNumber: $[ dependencies.Pack.outputs['setOutputVars.versionNumber'] ]
+    versionNumber: $[ dependencies.Pack.outputs['setOutputVar.versionNumber'] ]
   
   steps:
   - script: echo $(versionNumber)
