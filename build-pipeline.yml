@@ -7,11 +7,11 @@ variables:
   buildConfiguration: Release
 
 jobs:
-- job: Build
+- job: Job1
   pool:
     vmImage: 'vs2017-win2016'
-  steps:
 
+  steps:
   - script: >
       npx -p semantic-release
       -p @semantic-release/changelog
@@ -21,5 +21,20 @@ jobs:
     env: { GH_TOKEN: $(GitHubToken)}
     displayName: 'Semantic release'
 
+  - powershell: |
+      echo "##vso[task.setvariable variable=versionNumber;isOutput=true]$(nextRelease)"
+    name: setOutputVar
+
   - script: echo $(version)
+    displayName: 'Show next version'
+
+- job: Job2
+  dependsOn: Job1
+  pool:
+    vmImage: 'vs2017-win2016'
+  variables:
+    versionNumber: $[ dependencies.Pack.outputs['setOutputVars.versionNumber'] ]
+  
+  steps:
+  - script: echo $(versionNumber)
     displayName: 'Show next version'
