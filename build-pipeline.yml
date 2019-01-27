@@ -1,0 +1,25 @@
+name: SemanticReleaseTest
+
+trigger:
+  - master
+
+variables:
+  buildConfiguration: Release
+
+jobs:
+- job: Build
+  pool:
+    vmImage: 'vs2017-win2016'
+  steps:
+
+  - script: >
+      npx -p semantic-release
+      -p @semantic-release/changelog
+      -p @semantic-release/git
+      -p semantic-release-ado
+      semantic-release
+    env: { GH_TOKEN: $(GitHubToken)}
+    displayName: 'Semantic release'
+
+  - script: echo $(version)
+    displayName: 'Show next version'
