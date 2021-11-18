@@ -9,14 +9,14 @@ variables:
 jobs:
 - job: Job1
   pool:
-    vmImage: 'vs2017-win2016'
+    vmImage: 'windows-latest'
 
   steps:
   - script: >
       npx -p semantic-release
       -p @semantic-release/changelog
       -p @semantic-release/git
-      -p semantic-release-ado@1.3.0-alpha.1
+      -p semantic-release-ado@1.3.0-alpha.1 --dry-run
       semantic-release
     env: { GH_TOKEN: $(GitHubToken)}
     displayName: 'Semantic release'
@@ -31,7 +31,7 @@ jobs:
 - job: Job2
   dependsOn: Job1
   pool:
-    vmImage: 'vs2017-win2016'
+    vmImage: 'windows-latest'
   variables:
     versionNumber: $[ dependencies.Job1.outputs['setOutputVar.versionNumber'] ]
   
