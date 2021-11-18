@@ -16,8 +16,8 @@ jobs:
       npx -p semantic-release
       -p @semantic-release/changelog
       -p @semantic-release/git
-      -p semantic-release-ado@1.3.0-alpha.1 --dry-run
-      semantic-release
+      -p semantic-release-ado@1.3.0-alpha.1
+      semantic-release --dry-run
     env: { GH_TOKEN: $(GitHubToken)}
     displayName: 'Semantic release'
 
